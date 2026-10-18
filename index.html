@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ghaza Moh Al Ghazali | Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060606;--panel:#111111;--line:#2a2415;--gold:#c9a24b;--gold2:#e2c27a;--text:#f3efe6;--muted:#a9a396;
+--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Instrument Sans','Segoe UI',Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0}
+h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 40px}
+nav{position:sticky;top:0;z-index:10;background:rgba(6,6,6,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav b{font-family:var(--serif);font-weight:600;color:var(--gold2)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--gold2)}
+.hero{padding:72px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,7vw,5rem)}
+.hero h1 span{display:block;color:var(--gold)}
+.role{font-family:var(--serif);font-size:1.35rem;margin:26px 0 8px}
+.tags{color:var(--gold2);font-size:15px;margin:0 0 16px}
+.hero p.sum{color:var(--muted);max-width:46ch;margin:0 0 30px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:600;text-decoration:none;border:1px solid var(--gold)}
+.btn.main{background:var(--gold);color:#120d00}.btn.main:hover{background:var(--gold2)}
+.btn.alt{color:var(--gold2)}.btn.alt:hover{background:rgba(201,162,75,.12)}
+.photo{aspect-ratio:4/5;border-radius:14px;border:1px solid var(--gold);background:radial-gradient(circle at 30% 20%,#2b2410,#0b0b0b 70%);display:grid;place-items:center;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo span{font-family:var(--serif);font-size:5rem;color:var(--gold)}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:10px;padding:22px 18px}
+.card h3{font-size:1.15rem;margin-bottom:12px}
+.card ul,.step ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
+.card li,.step li{margin-bottom:4px}
+.alt-bg{background:#0d0d0d;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tl{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;position:relative}
+.tl::before{content:"";position:absolute;top:22px;left:4%;right:4%;height:2px;background:var(--gold)}
+.step{position:relative;padding-top:0}
+.dot{width:46px;height:46px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);color:var(--gold2);position:relative;margin-bottom:16px}
+.step h3{font-size:1.05rem;margin-bottom:10px}
+.works{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.work{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel)}
+.work .thumb{aspect-ratio:4/3;background:linear-gradient(135deg,#1c170a,#0a0a0a);display:grid;place-items:center;color:var(--muted);font-size:14px}
+.work div.t{padding:14px 16px}
+.work h3{font-size:1.05rem}.work p{margin:4px 0 0;color:var(--muted);font-size:14px}
+footer{border-top:1px solid var(--line);padding:64px 0 40px}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+footer h2{font-size:2rem}
+.contact a.btn{margin:0 10px 10px 0}
+.copy{margin-top:40px;color:var(--muted);font-size:14px}
+@media(max-width:900px){
+ .cards,.works{grid-template-columns:repeat(2,1fr)}
+ .tl{grid-template-columns:1fr;gap:28px}.tl::before{top:0;bottom:0;left:22px;right:auto;width:2px;height:auto}
+ .step{display:grid;grid-template-columns:46px 1fr;gap:0 16px}.dot{margin:0;grid-row:span 3}
+}
+@media(max-width:700px){
+ body{font-size:16px}section{padding:64px 0}
+ .hero .wrap,footer .wrap{grid-template-columns:1fr}.photo{max-width:340px}
+ nav ul{gap:14px;font-size:14px}nav li:nth-child(n+4){display:none}
+ .cards,.works{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>GMAG</b>
+<ul><li><a href="#utama">Utama</a></li><li><a href="#tentang">Tentang</a></li><li><a href="#pengalaman">Pengalaman</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#kontak">Kontak</a></li></ul></div></nav>
+
+<header class="hero" id="utama"><div class="wrap">
+<div>
+<h1>Ghaza Moh <span>Al Ghazali</span></h1>
+<p class="role">Multidisciplinary Professional</p>
+<p class="tags">Operations, Administration, Leadership, Digital Creative</p>
+<p class="sum">Berpengalaman dalam operasional, administrasi, retail, F&amp;B, digital operation, serta freelance creative. Selalu berorientasi pada solusi, efisiensi, dan hasil terbaik.</p>
+<div class="btns"><a class="btn main" href="#pengalaman">Lihat Pengalaman</a><a class="btn alt" href="#portfolio">Lihat Project</a></div>
+</div>
+<!-- Ganti baris di bawah dengan: <div class="photo"><img src="foto.jpg" alt="Foto Ghaza"></div> -->
+<div class="photo" aria-label="Tempat foto"><span>GM</span></div>
+</div></header>
+
+<section id="tentang" class="alt-bg"><div class="wrap">
+<h2>Tentang saya</h2>
+<p class="lead">Saya profesional yang adaptif dan detail-oriented, terbiasa bekerja di lingkungan dinamis, memimpin tim, dan mengelola operasional. Sejak 2021 saya juga aktif sebagai freelancer di bidang desain, branding, web, serta administrasi dan data.</p>
+<div class="cards">
+<div class="card"><h3>Creative &amp; Freelance</h3><ul><li>Graphic Design</li><li>Web Design</li><li>Branding</li><li>Sosial Media Design</li><li>Report &amp; Data Design</li></ul></div>
+<div class="card"><h3>Digital Operations</h3><ul><li>Server monitoring</li><li>API monitoring</li><li>Transaction monitoring</li><li>Supplier monitoring</li><li>Troubleshooting</li></ul></div>
+<div class="card"><h3>F&amp;B &amp; Retail</h3><ul><li>Customer service</li><li>Sales</li><li>Stock management</li><li>Transaction handling</li><li>Complaint handling</li></ul></div>
+<div class="card"><h3>Administration &amp; Data</h3><ul><li>Microsoft Excel</li><li>Data entry</li><li>Reporting</li><li>Inventory</li><li>Accounting support</li></ul></div>
+<div class="card"><h3>Leadership &amp; Operations</h3><ul><li>Team leadership</li><li>Operational management</li><li>Staff management</li><li>Quality control</li><li>Target &amp; KPI</li></ul></div>
+</div></div></section>
+
+<section id="pengalaman"><div class="wrap">
+<h2>Perjalanan kerja</h2>
+<p class="lead">Dari lini depan toko sampai monitoring sistem digital, berikut tahapan pengalaman saya.</p>
+<div class="tl">
+<div class="step"><div class="dot">1</div><h3>Retail</h3><ul><li>Melayani pelanggan</li><li>Transaksi penjualan</li><li>Stock opname</li><li>Penataan produk</li><li>Operasional toko</li></ul></div>
+<div class="step"><div class="dot">2</div><h3>Gudang</h3><ul><li>Mencatat barang keluar masuk</li><li>Mengecek stok</li><li>Mengelola inventaris</li><li>Administrasi gudang</li></ul></div>
+<div class="step"><div class="dot">3</div><h3>Desain</h3><ul><li>Graphic design</li><li>Web design</li><li>Branding</li><li>Social media design</li><li>Report &amp; data</li></ul></div>
+<div class="step"><div class="dot">4</div><h3>Administrasi</h3><ul><li>Administrasi perusahaan</li><li>Stock &amp; product</li><li>Sales dan HR</li><li>Produksi franchise</li><li>Vendor event</li></ul></div>
+<div class="step"><div class="dot">5</div><h3>Operasional</h3><ul><li>Mengawasi operasional harian</li><li>Mengelola staff (5-20 orang)</li><li>Menjaga standar kualitas</li><li>Mencapai target produksi dan penjualan</li></ul></div>
+<div class="step"><div class="dot">6</div><h3>Digital Ops</h3><ul><li>Monitoring transaksi</li><li>Monitoring H2H, API, dan supplier</li><li>Mengelola produk dan harga</li><li>Membuat laporan</li></ul></div>
+</div></div></section>
+
+<section id="portfolio" class="alt-bg"><div class="wrap">
+<h2>Portfolio</h2>
+<p class="lead">Pilihan karya desain dan project. Setiap kotak bisa diganti dengan gambar dan tautan project kamu.</p>
+<div class="works">
+<article class="work"><div class="thumb">Gambar karya</div><div class="t"><h3>Branding</h3><p>Logo dan identitas visual</p></div></article>
+<article class="work"><div class="thumb">Gambar karya</div><div class="t"><h3>Web Design</h3><p>Desain dan pembuatan website</p></div></article>
+<article class="work"><div class="thumb">Gambar karya</div><div class="t"><h3>Social Media</h3><p>Konten dan feed Instagram</p></div></article>
+<article class="work"><div class="thumb">Gambar karya</div><div class="t"><h3>Report &amp; Data</h3><p>Laporan dan dashboard</p></div></article>
+</div></div></section>
+
+<footer id="kontak"><div class="wrap">
+<div><h2>Ghaza Moh Al Ghazali</h2><p class="lead" style="margin:12px 0 0">Strategi digital, arsitektur sistem, dan eksekusi visual untuk pertumbuhan bisnis.</p></div>
+<div class="contact">
+<p style="margin-top:0">Tangerang Selatan</p>
+<a class="btn main" href="https://wa.me/6285195550128">Chat WhatsApp</a>
+<a class="btn alt" href="mailto:gmalghazali@gmail.com">Kirim email</a>
+</div>
+<p class="copy" style="grid-column:1/-1">© 2026 Ghaza Moh Al Ghazali. Strategi yang terarah, eksekusi yang berdampak.</p>
+</div></footer>
+</body>
+</html>
